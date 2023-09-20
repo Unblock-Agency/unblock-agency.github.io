@@ -45,6 +45,7 @@ h6 {
   padding: 0;
 }
 
+
 /* Back to top button */
 
 .back-to-top {
@@ -259,7 +260,7 @@ h6 {
   list-style: none;
 }
 
-.main-nav > ul > li {
+.main-nav>ul>li {
   position: relative;
   white-space: nowrap;
   float: left;
@@ -277,8 +278,8 @@ h6 {
 }
 
 .main-nav a:hover,
-.main-nav .active > a,
-.main-nav li:hover > a {
+.main-nav .active>a,
+.main-nav li:hover>a {
   color: #007bff;
   text-decoration: none;
 }
@@ -313,13 +314,13 @@ h6 {
 }
 
 .mobile-nav a:hover,
-.mobile-nav .active > a,
-.mobile-nav li:hover > a {
+.mobile-nav .active>a,
+.mobile-nav li:hover>a {
   color: #74b5fc;
   text-decoration: none;
 }
 
-.mobile-nav .drop-down > a:after {
+.mobile-nav .drop-down>a:after {
   content: "\f078";
   font-family: FontAwesome;
   padding-left: 10px;
@@ -327,11 +328,11 @@ h6 {
   right: 15px;
 }
 
-.mobile-nav .active.drop-down > a:after {
+.mobile-nav .active.drop-down>a:after {
   content: "\f077";
 }
 
-.mobile-nav .drop-down > a {
+.mobile-nav .drop-down>a {
   padding-right: 35px;
 }
 
@@ -581,10 +582,13 @@ h6 {
   margin-bottom: 0;
 }
 
+/*Why us*/
+
 #why-us {
   padding: 60px 0;
   background: #004a99;
 }
+
 
 #why-us .section-header h3,
 #why-us .section-header p {
@@ -601,6 +605,11 @@ h6 {
   color: #fff;
   transition: 0.3s ease-in-out;
   height: 100%;
+}
+
+#why-us ul {
+  display: inline-block;
+  text-align: left;
 }
 
 #why-us .card:hover {
@@ -723,6 +732,11 @@ h6 {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
+#team .row {
+  display: flex;
+  justify-content: center;
+}
+
 #team .member {
   text-align: center;
   margin-bottom: 20px;
@@ -810,8 +824,8 @@ h6 {
 }
 
 #clients .clients-wrap {
-  border-top: 1px solid #d6eaff;
-  border-left: 1px solid #d6eaff;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -860,7 +874,12 @@ h6 {
 
 #contact .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contact .row > .info {
+  max-width: max-content;
 }
 
 #contact .info {
@@ -879,6 +898,7 @@ h6 {
   line-height: 28px;
   font-size: 14px;
 }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
