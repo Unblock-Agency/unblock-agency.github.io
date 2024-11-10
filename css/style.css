@@ -45,6 +45,25 @@ h6 {
   padding: 0;
 }
 
+/* Style for Back to Home button */
+.back-to-home {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0069FF; /* Button color */
+  color: #FFFFFF; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  position: fixed; /* Keep it at a fixed position */
+  bottom: 20px; /* Position it at the bottom */
+  left: 20px; /* Position it on the left side */
+}
+
+.back-to-home:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
 
 /* Back to top button */
 
@@ -170,6 +189,25 @@ h6 {
 
 .main-pages {
   margin-top: 60px;
+}
+
+.new-badge {
+  background-color: red;
+  color: white;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+section h2 {
+  font-size: 28px; /* Same size for both titles */
+  font-weight: bold; /* Both are bold */
+  text-align: center; /* Center alignment */
+  margin-bottom: 20px; /* Adds space below the title */
+  padding-top: 30px; /* Adds padding above the title */
 }
 
 /*--------------------------------------------------------------
@@ -665,6 +703,28 @@ h6 {
   color: #cce5ff;
 }
 
+/* Heavy+ Styling */
+
+.service-box {
+  text-align: center;       /* Centers text and button */
+  color: white;             /* Sets text color to white */
+}
+
+.service-box .card-title {
+  font-weight: bold; /* Makes the title bold */
+}
+
+
+.service-box h5,
+.service-box p {
+  color: white;             /* Ensure both title and paragraph text are white */
+}
+
+.service-box .btn-primary {
+  margin-top: 0.1em;          /* Adds spacing between text and button */
+}
+
+
 /* Testimonials Section
 --------------------------------*/
 
@@ -1050,6 +1110,390 @@ h6 {
 
 #footer .credits a:hover {
   color: #f1f7ff;
+}
+
+/*--------------------------------------------------------------
+# Pilot Program Page
+--------------------------------------------------------------*/
+
+/* Intro Section
+--------------------------------*/
+
+/* Add padding to the top of the Pilot Intro section */
+#pilot-intro {
+  padding-top: 110px; /* Adjust this value based on the height of your header */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main Heading (h3) */
+#pilot-intro h3 {
+  color: #0069FF;           /* Blue color */
+  font-weight: bold;        /* Bold font */
+  font-size: 2.5rem;        /* Adjust size as needed */
+  margin-bottom: 20px;      /* Space below the heading */
+}
+
+/* Subheading (h4) */
+#pilot-intro h4 {
+  text-align: center;
+  width: 100%;               /* Ensures the container doesn't overflow */
+  font-size: 1.25em;         /* Slightly larger than the paragraphs */
+  font-weight: normal;       /* Not bold */
+  white-space: nowrap;       /* Prevent line breaks */
+  margin-top: 15px;          /* Space above the subheading */
+  margin-bottom: 15px;       /* Space below the subheading */
+  line-height: 1.6;          /* Increases line height for readability */
+  word-wrap: break-word;     /* Ensures text wraps within the container */
+  word-break: break-word;    /* Prevents text overflow */
+  max-width: 100%;           /* Ensures it doesn’t overflow */
+  overflow-wrap: break-word; /* Ensures text wraps correctly */
+  box-sizing: border-box;    /* Ensures padding is within the container */
+}
+
+#pilot-intro .pilot-image {
+  width: 80%;         /* Makes the image responsive */
+  max-width: 500px;      /* Limits the width to 60% of the container */
+  height: auto;        /* Keeps the aspect ratio intact */
+  margin-top: 0;       /* Removes any top margin */
+  margin-bottom: 50px;    /* Ensures no bottom margin is added */
+  display: block;      /* Ensures the image is a block element */
+  margin-left: auto;   /* Centers the image */
+  margin-right: auto;  /* Centers the image */
+}
+
+/* Paragraphs (p) */
+#pilot-intro p {
+  font-size: 1rem;           /* Smaller than the subheading */
+  margin-top: 15px;          /* Adds space above */
+  margin-bottom: 20px;       /* Adds space below */
+  line-height: 1.6;          /* Better readability */
+  word-wrap: break-word;     /* Ensures text wraps within the container */
+  word-break: break-word;    /* Prevents text overflow */
+  width: 100%;               /* Ensures the paragraph takes the full width */
+  box-sizing: border-box;    /* Ensures padding doesn't affect the width */
+  padding-left: 60px;        /* Adjust the left padding */
+  padding-right: 60px;       /* Adjust the right padding */
+}
+
+
+#pilot-intro .container {
+  width: 100%;               /* Ensures the container doesn't overflow */
+  max-width: 100%;           /* Prevents it from exceeding the screen width */
+  padding-left: 15px;        /* Adds some padding on the left */
+  padding-right: 15px;       /* Adds some padding on the right */
+  box-sizing: border-box;    /* Ensures the padding is within the container */
+}
+
+
+/* What to Expect Section
+--------------------------------*/
+#what-to-expect {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px; /* Space below the section */
+  min-height: 300px; /* Adjusted height to create space for title positioning */
+  padding-top: 20px; /* Adds space from the top of the section */
+  position: relative; /* Allow absolute positioning within */
+}
+
+/* What to Expect Section */
+#what-to-expect {
+  margin-bottom: 50px; /* Adds space below the What to Expect section */
+}
+
+/* Title Styling */
+#what-to-expect h2 {
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px; /* Adjust this value to lower the title */
+  margin-bottom: 40px; /* Adds space below the title */
+}
+
+/* Content (Paragraphs + Images) */
+#what-to-expect .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Paragraph Styling */
+#what-to-expect p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Right Side (Images) Styling */
+#what-to-expect .container > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+
+#what-to-expect .container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Button Styling */
+.btn-explore {
+  display: inline-block;
+  background-color: #0069FF;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+  background-color: #0056b3;
+}
+
+/* Center the Button */
+.button-container {
+  text-align: center;
+  margin-top: 40px; /* Space between content and button */
+}
+
+/* About Our Founder Section
+--------------------------------*/
+#about-founder {
+  margin-top: 70px; /* Adds space above the About Founder section */
+  font-family: 'Arial', sans-serif; /* Ensure both sections use the same font */
+  background-color: #f5f5f5; /* Light gray background */
+  padding-top: 60px; /* Adds space between the top of the section and the title */
+  padding-bottom: 80px; /* Adds more space between the paragraph and the bottom of the section */
+}
+
+#about-founder .container {
+  text-align: left;
+  max-width: 1200px; /* Expanded container width */
+  margin: 0 auto;
+}
+
+/* About Our Founder Title - Black */
+#about-founder h2 {
+  color: black; /* Black color */
+  font-weight: bold !important; /* Force bold styling */
+  text-align: center !important; /* Ensure it stays centered */
+  font-family: 'Arial', sans-serif; /* Ensure this title matches the Pilot Program Milestones */
+  margin-bottom: 40px; /* Space below */
+}
+
+.founder-content {
+  display: flex;
+  align-items: flex-start; /* Aligns image to the top of the text */
+  gap: 40px;               /* Increases gap between image and text */
+  flex-wrap: wrap;         /* Allows content to wrap on smaller screens */
+  justify-content: flex-start; /* Left align content */
+  padding-left: 10px;       /* Adds space to the left to shift content */
+}
+
+.founder-image {
+  width: 280px;            /* Image width */
+  height: auto;            /* Maintains aspect ratio */
+  object-fit: contain;     /* Ensures the entire image is visible */
+  flex-shrink: 0;          /* Prevents image from shrinking */
+  border: 5px solid #000000;  /* Adds a gray border around the image */
+  border-radius: 10px;     /* Optional: Rounds the corners of the border */
+}
+
+.founder-text {
+  flex: 1;                 /* Allows text to take up remaining space */
+  min-width: 500px;        /* Ensures text container has enough width */
+}
+
+.founder-text p {
+  margin-top: 0;
+  margin-bottom: 20px;     /* Adds more space between paragraphs */
+  line-height: 1.5;        /* Optional: Adjust line height for readability */
+}
+
+/* Pilot Program Milestones Section
+--------------------------------*/
+#pilot-program-milestones {
+  padding: 60px 0;
+  background: #004a99;
+}
+
+/* Pilot Program Milestones Title - White */
+#pilot-program-milestones h2 {
+  color: white; /* White color */
+  font-weight: bold !important; /* Ensure bold for Pilot Program Milestones */
+  text-align: center !important; /* Ensure it stays centered */
+  margin-bottom: 40px; /* Space below */
+  padding-top: 30px; /* Adds padding above the title */
+  font-family: 'Arial', sans-serif; /* Same font-family */
+}
+
+#pilot-program-milestones h4 {
+  color: #fff;  /* Section title */
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#pilot-program-milestones .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;  /* Space between cards */
+}
+
+#pilot-program-milestones .milestone-month {
+  background: #ffffff; /* White background for each card */
+  border-color: #e0e0e0; /* Light border color */
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #000000; /* Black text color */
+  transition: 0.3s ease-in-out;
+  width: calc(50% - 10px);  /* Make each card take up 50% of the container width */
+  box-sizing: border-box;  /* Ensure padding doesn't affect the width */
+}
+
+#pilot-program-milestones .milestone-month:hover {
+  background: #f7f7f7; /* Light grey on hover */
+}
+
+#pilot-program-milestones .milestone-month i {
+  font-size: 48px;
+  color: #004a99; /* Blue color for icon */
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Target the title directly (h4 tag) within the milestone-month */
+#pilot-program-milestones .milestone-month h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #004a99; /* Dark blue for card title */
+  margin-bottom: 15px;
+}
+
+#pilot-program-milestones .milestone-month strong {
+  font-size: 16px;
+  color: #333333; /* Dark grey for bold text */
+}
+
+#pilot-program-milestones ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+#pilot-program-milestones .milestone-month p{
+  margin-bottom: 10px; /* Reduce spacing between paragraphs and lists */
+}
+
+#pilot-program-milestones .milestone-month ul li {
+  font-size: 15px;
+  color: #333333; /* Dark grey for list items and paragraph text */
+  margin-bottom: 10px; /* Reduce spacing between list items */
+}
+
+/* For each month, explicitly ensure the icons are correct */
+#pilot-program-milestones .milestone-month:nth-child(1) i {
+  content: "\f00c"; /* fa-flag-checkered for Month 1 */
+}
+
+#pilot-program-milestones .milestone-month:nth-child(2) i {
+  content: "\f0ae"; /* fa-tasks for Month 2 */
+}
+
+#pilot-program-milestones .milestone-month:nth-child(3) i {
+  content: "\f0c0"; /* fa-users for Month 3 */
+}
+
+#pilot-program-milestones .milestone-month:nth-child(4) i {
+  content: "\f201"; /* fa-chart-line for Month 4 */
+}
+
+#pilot-program-milestones .milestone-month:nth-child(5) i {
+  content: "\f075"; /* fa-comments for Month 5 */
+}
+
+#pilot-program-milestones .milestone-month:nth-child(6) i {
+  content: "\f019"; /* fa-award for Month 6 */
+}
+
+
+/* Key Deliverables Section
+--------------------------------*/
+#key-deliverables {
+  background-color: #000; /* Black background */
+  color: #fff;            /* White text for section */
+  padding: 50px 0;        /* Vertical padding */
+}
+
+#key-deliverables h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Deliverable Card */
+.deliverable-card {
+  position: relative;
+  background-color: #fff;    /* White background for cards */
+  color: #000;               /* Black text for card content */
+  padding: 20px 20px 20px 60px; /* Add left padding for icon space */
+  margin: 15px auto;         /* Space between cards */
+  border-radius: 8px;        /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  max-width: 800px;          /* Optional: set a max-width for alignment */
+}
+
+.deliverable-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.deliverable-card strong {
+  font-weight: bold;
+}
+
+/* Numbered Icon Styling */
+.number-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;              /* Inside the card, positioned on the left */
+  color: #000;             /* Black text for number */
+  border: 2px solid #000;  /* Black border */
+  border-radius: 50%;      /* Circle border */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;         /* Adjust size as needed */
+}
+
+/* Additional Headers */
+#key-deliverables h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 22px; /* Larger than previous size */
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+#key-deliverables h3:first-of-type {
+  margin-top: 60px; /* Additional space above the first h3 */
 }
 
 /*--------------------------------------------------------------
