@@ -1121,7 +1121,7 @@ section h2 {
 
 /* Add padding to the top of the Pilot Intro section */
 #pilot-intro {
-  padding-top: 110px; /* Adjust this value based on the height of your header */
+  padding-top: 150px; /* Increase this value as needed */
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -1178,11 +1178,35 @@ section h2 {
 
 
 #pilot-intro .container {
-  width: 100%;               /* Ensures the container doesn't overflow */
-  max-width: 100%;           /* Prevents it from exceeding the screen width */
+  margin-top: 30px;           /* Add more space between sections */
   padding-left: 15px;        /* Adds some padding on the left */
   padding-right: 15px;       /* Adds some padding on the right */
   box-sizing: border-box;    /* Ensures the padding is within the container */
+}
+
+/* Styles for the Pilot Program buttons */
+.pilot-buttons {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px; /* Adds padding between buttons and the image */
+}
+
+.btn-pilot {
+  display: inline-block;
+  padding: 6px 14px; /* Slightly smaller padding */
+  margin: 5px;
+  color: #FFFFFF;          /* White text color */
+  background-color: #000000; /* Black button color */
+  border-radius: 20px;     /* Rounded edges */
+  text-decoration: none;
+  font-size: 0.75rem;      /* Slightly smaller font size */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pilot:hover {
+  background-color: #0069FF; /* Blue button color on hover */
+  color: #FFFFFF;            /* Keep text color white on hover */
 }
 
 
