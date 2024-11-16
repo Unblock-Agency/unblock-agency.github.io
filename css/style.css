@@ -213,7 +213,6 @@ section h2 {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
-
 #intro {
   width: 100%;
   position: relative;
@@ -222,46 +221,106 @@ section h2 {
   padding: 200px 0 120px 0;
 }
 
-#intro .intro-img {
-  width: 50%;
-  float: right;
+#intro .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  visibility: hidden; /* Make the items hidden by default */
+  opacity: 0; /* Hide the non-active items */
+  transition: visibility 0s, opacity 0.5s ease; /* Smooth fade effect */
+}
+
+#intro .carousel-item.active {
+  visibility: visible; /* Make the active item visible */
+  opacity: 1; /* Full opacity for the active item */
+}
+
+#intro .carousel-inner {
+  display: flex;
+  width: 100%;
+}
+
+#intro .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 #intro .intro-info {
-  width: 50%;
-  float: left;
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#intro .intro-img {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+#intro .intro-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure text and image are on opposite sides */
+.carousel-item:first-child .intro-info {
+  order: 1;
+}
+
+.carousel-item:first-child .intro-img {
+  order: 2;
+}
+
+.carousel-item:last-child .intro-info {
+  order: 2;
+}
+
+.carousel-item:last-child .intro-img {
+  order: 1;
 }
 
 #intro .intro-info h2 {
   color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 48px;
   font-weight: 700;
+  line-height: 1.3;
 }
 
-#intro .intro-info h2 span {
-  color: #74b5fc;
-  text-decoration: underline;
+#intro .intro-info p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #cfd8e6;
+  margin-bottom: 30px;
 }
 
+#intro .intro-info .btn-group,
 #intro .intro-info .btn-get-started,
 #intro .intro-info .btn-services {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1px;
-  display: inline-block;
   padding: 10px 32px;
   border-radius: 50px;
   transition: 0.5s;
-  margin: 0 20px 20px 0;
   color: #fff;
+  margin: 10px;
+  text-align: center;
+}
+
+#intro .btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 #intro .intro-info .btn-get-started {
   background: #007bff;
   border: 2px solid #007bff;
-  color: #fff;
 }
 
 #intro .intro-info .btn-get-started:hover {
@@ -278,6 +337,13 @@ section h2 {
   background: #007bff;
   border-color: #007bff;
   color: #fff;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff;
+  border-radius: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -620,24 +686,66 @@ section h2 {
   margin-bottom: 0;
 }
 
-/*Why us*/
-
+/* Why Us Section */
 #why-us {
+  position: relative;
   padding: 60px 0;
   background: #004a99;
 }
 
-
+/* Clear the title, description, and warning box */
 #why-us .section-header h3,
-#why-us .section-header p {
-  color: #fff;
+#why-us .section-header p,
+#why-us .warning-box {
+  filter: none; /* Keep content clear */
 }
 
+/* Blurred Content (Service Cards) */
+.blur-content {
+  filter: blur(5px); /* Apply blur effect only to the service cards */
+}
+
+/* Warning Box Styling */
+.warning-box {
+  position: absolute;
+  top: 120px; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0; /* Space between the header and cards */
+  color: #004a99;
+  font-size: 16px;
+  text-align: center;
+  z-index: 2; /* Keeps it above the blurred content */
+  filter: none; /* Prevents blurring */
+}
+
+.warning-box .btn {
+  display: inline-block; /* Make the button behave as a button */
+  margin-top: 15px; /* Space between the text and the button */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Button text size */
+  color: #fff; /* White text color */
+  background-color: #004a99; /* Button background color */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+}
+
+.warning-box .btn:hover {
+  background-color: #003b7a; /* Darken the button background on hover */
+}
+
+/* Card Styling (for each service tier) */
 #why-us .card {
   background: #00458f;
   border-color: #00458f;
   border-radius: 10px;
-  margin: 0 15px;
   padding: 15px 0;
   text-align: center;
   color: #fff;
@@ -683,47 +791,16 @@ section h2 {
   border-bottom: #fff solid 2px;
 }
 
-#why-us .counters {
-  padding-top: 40px;
-}
-
-#why-us .counters span {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 48px;
-  display: block;
-  color: #fff;
-}
-
-#why-us .counters p {
-  padding: 0;
-  margin: 0 0 20px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: #cce5ff;
-}
-
-/* Heavy+ Styling */
-
-.service-box {
-  text-align: center;       /* Centers text and button */
-  color: white;             /* Sets text color to white */
-}
-
-.service-box .card-title {
-  font-weight: bold; /* Makes the title bold */
+/* Body Scroll Control */
+body {
+  overflow: auto; /* Ensure the page remains scrollable */
 }
 
 
-.service-box h5,
-.service-box p {
-  color: white;             /* Ensure both title and paragraph text are white */
+/* Body Scroll Control */
+body {
+  overflow: auto; /* Ensure the page remains scrollable */
 }
-
-.service-box .btn-primary {
-  margin-top: 0.1em;          /* Adds spacing between text and button */
-}
-
 
 /* Testimonials Section
 --------------------------------*/
@@ -1278,10 +1355,43 @@ section h2 {
   text-decoration: none;
   border-radius: 30px;
   transition: background-color 0.3s ease;
+  margin-right: 10px; /* Spacing between buttons */
 }
 
 .btn-explore:hover {
   background-color: #0056b3;
+}
+
+/* General Button Styling */
+.warning-box .btn-learn-more, .warning-box .btn-qualify {
+  display: inline-block;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Space between buttons */
+}
+
+/* Black Button for "Learn More" */
+.warning-box .btn-learn-more {
+  background-color: #000000; /* Black background */
+}
+
+.warning-box .btn-learn-more:hover {
+  background-color: #333333; /* Dark gray on hover */
+}
+
+/* Light Blue Button for "See If You Qualify" */
+.warning-box .btn-qualify {
+  background-color: #0069FF; /* Classic light blue */
+}
+
+.warning-box .btn-qualify:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
 }
 
 /* Center the Button */
