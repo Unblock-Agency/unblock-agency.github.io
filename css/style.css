@@ -1053,6 +1053,37 @@ body {
   padding: 0 0 10px 36px;
   line-height: 28px;
   font-size: 14px;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+/* OR Divider Styling */
+.or-divider {
+  text-align: center;
+  margin: 20px 0; /* Add spacing above and below */
+}
+
+.or-divider span {
+  font-size: 24px; /* Adjust size to make it noticeable but smaller than the title */
+  font-weight: bold;
+  color: #007bff; /* Matches the theme color */
+  background: #fff; /* White background for separation */
+  padding: 0 10px; /* Add padding around the text */
+  position: relative;
+  z-index: 1; /* Ensure text is above the line */
+}
+
+.or-divider::before {
+  content: '';
+  display: block;
+  border-top: 1px solid #ddd; /* Light gray line */
+  position: relative;
+  top: -15px; /* Align the line with the text */
+  margin: 0 auto;
+  width: 80%; /* Adjust the line length */
+}
+
+.or-divider span {
+  background-color: #fff;
 }
 
 /*--------------------------------------------------------------
