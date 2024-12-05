@@ -228,6 +228,54 @@ section h2 {
   padding-top: 30px; /* Adds padding above the title */
 }
 
+/* Navigation Bar Alignment */
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  margin: 0 10px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #283d50;
+}
+
+/* Login Button Styling */
+.btn-login {
+  background: #007bff; /* Same blue color */
+  border: 2px solid #007bff; /* Border matching background */
+  color: #fff !important; /* White text */
+  padding: 6px 25px !important; /* Larger padding for longer button */
+  font-size: 14px; /* Adjust text size */
+  font-weight: bold !important;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded corners */
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background: none; /* Transparent background on hover */
+  border-color: #000; /* Black border on hover */
+  color: #000 !important; /* Black text on hover */
+}
+
+.ml-3 {
+  margin-left: 15px; /* Space between nav items and the login button */
+}
+
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
