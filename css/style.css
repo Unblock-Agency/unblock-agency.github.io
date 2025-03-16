@@ -1408,6 +1408,33 @@ body {
   position: relative; /* Allow absolute positioning within */
 }
 
+/*What's Happening Section*/
+#whats-happening {
+  background-color: #000; /* Black background */
+  color: #fff;            /* White text */
+  padding: 50px 0;        /* Vertical padding */
+}
+
+#whats-happening h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#whats-happening h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem; /* Adjust size to be smaller than h2 */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.bold-blue {
+  color: #276BF6;
+  font-weight: bold;
+}
+
 /* What to Expect Section */
 #what-to-expect {
   margin-bottom: 50px; /* Adds space below the What to Expect section */
