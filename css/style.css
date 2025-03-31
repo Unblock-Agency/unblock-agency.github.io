@@ -457,107 +457,66 @@ section h2 {
 
 /* Mobile Navigation */
 
+/* Hide mobile menu by default */
 .mobile-nav {
   position: fixed;
   top: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow-y: auto;
-  left: -260px;
+  left: -100%;
   width: 260px;
-  padding-top: 18px;
-  background: rgba(19, 39, 57, 0.8);
-  transition: 0.4s;
+  height: 100%;
+  background: rgba(19, 39, 57, 0.9);
+  transition: left 0.4s ease-in-out;
+  z-index: 9999;
+  padding-top: 20px;
 }
 
-.mobile-nav * {
-  margin: 0;
-  padding: 0;
+.mobile-nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .mobile-nav a {
   display: block;
-  position: relative;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-weight: 500;
 }
 
-.mobile-nav a:hover,
-.mobile-nav .active>a,
-.mobile-nav li:hover>a {
+.mobile-nav a:hover {
   color: #74b5fc;
-  text-decoration: none;
-}
-
-.mobile-nav .drop-down>a:after {
-  content: "\f078";
-  font-family: FontAwesome;
-  padding-left: 10px;
-  position: absolute;
-  right: 15px;
-}
-
-.mobile-nav .active.drop-down>a:after {
-  content: "\f077";
-}
-
-.mobile-nav .drop-down>a {
-  padding-right: 35px;
-}
-
-.mobile-nav .drop-down ul {
-  display: none;
-  overflow: hidden;
-}
-
-.mobile-nav .drop-down li {
-  padding-left: 20px;
 }
 
 .mobile-nav-toggle {
   position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 9998;
-  border: 0;
+  right: 20px;
+  top: 15px;
+  z-index: 10000;
   background: none;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: none !important;
-  line-height: 1;
-  cursor: pointer;
-  text-align: right;
-}
-
-.mobile-nav-toggle i {
-  margin: 18px 18px 0 0;
+  font-size: 28px;
   color: #004289;
+  cursor: pointer;
+  border: none;
 }
 
-.mobile-nav-overly {
-  width: 100%;
-  height: 100%;
-  z-index: 9997;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(19, 39, 57, 0.8);
-  overflow: hidden;
-  display: none;
-}
-
-.mobile-nav-active {
-  overflow: hidden;
-}
-
+/* When mobile menu is active */
 .mobile-nav-active .mobile-nav {
   left: 0;
 }
 
-.mobile-nav-active .mobile-nav-toggle i {
-  color: #fff;
+.mobile-nav-overly {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+.mobile-nav-active .mobile-nav-overly {
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1883,6 +1842,40 @@ body {
   margin-top: 60px; /* Additional space above the first h3 */
 }
 
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show menu button */
+  }
+
+  .main-nav ul {
+    display: none; /* Hide menu items by default */
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav ul.open {
+    display: flex; /* Show when menu is toggled */
+  }
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -1968,5 +1961,50 @@ body {
 @media (max-width: 574px) {
   #intro {
     padding: 100px 0 20px 0;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Make pilot buttons scrollable instead of squeezing them */
+  .pilot-buttons {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Allows scrolling */
+    white-space: nowrap; /* Keeps buttons in one line */
+    padding: 10px; /* Adjust spacing */
+    justify-content: flex-start; /* Align to the left */
+  }
+
+  .btn-pilot {
+    flex: 0 0 auto; /* Prevents buttons from shrinking */
+    padding: 10px 15px; /* Adjust padding */
+    font-size: 0.7rem; /* Make text slightly smaller */
+  }
+
+  /* Ensure sections have enough space */
+  section {
+    padding: 20px; /* Reduce padding to save space */
+  }
+
+  /* Make text more readable */
+  h2 {
+    font-size: 24px; /* Slightly smaller heading */
+  }
+
+  /* Adjust header for smaller screens */
+  #header {
+    height: 60px; /* Make it shorter */
+    padding: 10px 0;
+  }
+
+  /* Ensure navbar doesn’t take up too much space */
+  .main-nav ul {
+    flex-direction: column; /* Stack links */
+    text-align: center; /* Center items */
+  }
+
+  .main-nav ul li {
+    margin: 5px 0; /* Space out menu items */
   }
 }

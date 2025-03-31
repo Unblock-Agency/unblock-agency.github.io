@@ -51,32 +51,51 @@
   ======================================================= -->
 </head>
 <body>
-    <!--==========================
-    Header
-    ============================-->
-    <header id="header" class="fixed-top">
-        <div class="container">
-    
-          <div class="logo float-left">
-            <a href="index.html#intro" class="scrollto"><img src="img/UA Text No Logo.png" alt="" class="img-fluid"></a>
-          </div>
-    
-          <nav class="main-nav float-right d-none d-lg-block">
-            <ul>
-              <li><a href="index.html#intro">Home</a></li>
-              <li><a href="index.html#about">About Us</a></li>
-              <li><a href="index.html#services">Process</a></li>
-              <li><a href="index.html#why-us">Services</a></li>
-              <li><a href="index.html#team">Team</a></li>
-              <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
-              <li><a href="index.html#contact">Contact Us</a></li>
-            </ul>
-            <!-- Login Button -->
-            <!--<a href="https://portal.unblockagency.com" class="btn-login ml-3">Login</a>-->
-          </nav><!-- .main-nav -->
-          
+  <header id="header" class="fixed-top">
+    <div class="container">
+        <div class="logo float-left">
+            <a href="index.html#intro" class="scrollto">
+                <img src="img/UA Text No Logo.png" alt="" class="img-fluid">
+            </a>
         </div>
-      </header><!-- #header -->
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav d-none d-lg-block">
+            <ul>
+                <li><a href="index.html#intro">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Process</a></li>
+                <li><a href="index.html#why-us">Services</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Hamburger Menu -->
+        <button class="menu-toggle d-lg-none" aria-label="Toggle Navigation">
+            ☰
+        </button>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html#intro">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Process</a></li>
+                <li><a href="index.html#why-us">Services</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-nav-overly"></div>
+    </div>
+</header>
+
+  
     <!--==========================
       Pilot Intro Section
     ============================-->
@@ -550,6 +569,25 @@
 
     window.addEventListener("scroll", highlightButton);
   });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const body = document.body;
+    const overlay = document.querySelector(".mobile-nav-overly");
+
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            body.classList.toggle("mobile-nav-active");
+        });
+
+        // Close menu when clicking outside
+        overlay.addEventListener("click", function () {
+            body.classList.remove("mobile-nav-active");
+        });
+    }
+});
+
   </script>
   </body>    
 
