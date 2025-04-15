@@ -13,3 +13,7 @@
 #logo {
     max-width: 160px;
 }
+
+#logo:hover {
+    cursor: pointer;
+}

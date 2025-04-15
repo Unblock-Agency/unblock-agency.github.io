@@ -8,7 +8,7 @@ export default function Contact() {
                 <a id="email" href="mailto:hi@unblock.agency">hi@unblock.agency</a>
             </h3>
             <iframe
-                src="https://calendly.com/aritrom/30min"
+                src="https://calendly.com/aritro-unblockagency/pilot-program?hide_gdpr_banner=1"
                 width="1024px"
                 height="600px"
                 style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '1rem', margin: '2.2rem 0'}}

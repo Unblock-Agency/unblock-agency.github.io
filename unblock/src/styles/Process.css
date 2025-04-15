@@ -22,6 +22,17 @@
     text-align: left;
 }
 
+.process-card:hover {
+    cursor: grab;
+}
+
+.process-card-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+}
+
 .slider-arrow {
     background: none;
     border: 1.5px solid #2563EB;

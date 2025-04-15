@@ -17,9 +17,7 @@
     max-width: 760px;
 }
 
-#about-container,
-#mission,
-#vision {
+#about-container {
     max-width: 780px;
     text-align: left;
     box-sizing: border-box;
@@ -36,7 +34,24 @@
     gap: 2rem;
 }
 
+#about-p {
+    max-width: 768px;
+    margin-bottom: 0;
+}
+
 .about-p {
     margin-left: 5.3rem;
     margin-right: 1rem;
+}
+
+#vis-miss {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2remrem;
+}
+
+#vision,
+#mission {
+    max-width: 840px;
+    text-align: left;
 }
