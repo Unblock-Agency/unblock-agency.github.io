@@ -1,4 +1,5 @@
 import React from 'react';
+import { Clock, Users2, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function WhatToExpect() {
    return (
@@ -17,27 +18,39 @@ export default function WhatToExpect() {
             </header>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                  <div className="flex items-center justify-center mb-4">
+                     <Clock className="w-10 h-10 text-black" />
+                  </div>
                   <h3 className="text-2xl font-semibold mb-3">Deliver On Time</h3>
                   <p className="text-gray-600">
-                     Our process ensures predictable delivery without delays.
+                     No more guessing when your product will be ready – our process ensures predictable delivery.
                   </p>
                </div>
                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                  <div className="flex items-center justify-center mb-4">
+                     <Users2 className="w-10 h-10 text-black" />
+                  </div>
                   <h3 className="text-2xl font-semibold mb-3">Reduce Tech Meetings</h3>
                   <p className="text-gray-600">
-                     Save time by letting us handle the technical details while you focus on growth.
+                     Save time and focus on growing your business while we handle the technical details.
                   </p>
                </div>
                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                  <div className="flex items-center justify-center mb-4">
+                     <CheckCircle className="w-10 h-10 text-black" />
+                  </div>
                   <h3 className="text-2xl font-semibold mb-3">Efficient &amp; Clear</h3>
                   <p className="text-gray-600">
-                     Enhance team alignment and clarity with our structured process.
+                     Enhance team alignment and clarity with our structured project management.
                   </p>
                </div>
                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                  <div className="flex items-center justify-center mb-4">
+                     <AlertTriangle className="w-10 h-10 text-black" />
+                  </div>
                   <h3 className="text-2xl font-semibold mb-3">Avoid Delays</h3>
                   <p className="text-gray-600">
-                     Our proactive approach prevents costly delays.
+                     Prevent costly delays and mistakes with our proactive and adaptive approach.
                   </p>
                </div>
             </div>
