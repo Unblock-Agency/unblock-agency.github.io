@@ -7,16 +7,16 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function PilotProgram() {
-  return (
-    <div id="pilot-program">
-      <PilotNavbar />
-      <main>
-        <PilotHero />
-        <WhatToExpect />
-        <Deliverables />
-        <Contact id="pilot-contact" />
-      </main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div id="pilot-program">
+            <PilotNavbar />
+            <main>
+                <PilotHero />
+                <WhatToExpect />
+                <Deliverables />
+                <Contact id="pilot-contact" />
+            </main>
+            <Footer />
+        </div>
+    );
 }
