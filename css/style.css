@@ -1260,6 +1260,57 @@ body {
   overflow-x: hidden;
 }
 
+.pilot-intro-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* spacing between text and image */
+  flex-wrap: wrap; /* so it stacks nicely on small screens */
+}
+
+.pilot-text {
+  flex: 1 1 300px; /* grow, shrink, basis */
+  max-width: 600px; /* optional max width */
+}
+
+.pilot-image-container {
+  flex: 1 1 300px;
+  max-width: 600px; /* optional max width */
+  text-align: center; /* center the image horizontally */
+}
+
+.pilot-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional rounding */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.pilot-heading {
+  text-align: left;
+}
+
+.pilot-heading h3 {
+  font-size: 2rem; /* adjust as needed */
+  margin-bottom: 0.5rem;
+}
+
+.pilot-heading h4 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  color: #444; /* optional: soften subheading */
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .pilot-intro-content {
+    flex-direction: column;
+  }
+  .pilot-text, .pilot-image-container {
+    max-width: 100%;
+  }
+}
+
 /* Main Heading (h3) */
 #pilot-intro h3 {
   color: #0069FF;           /* Blue color */
