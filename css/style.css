@@ -1457,6 +1457,11 @@ body {
   font-weight: bold;
 }
 
+.bold-red {
+  color: #e63946; /* or any red you prefer */
+  font-weight: bold;
+}
+
 /* Why Not? Section */
 #why-not {
     background-color: #F0F8FF; /* Very Light Blue Background */
@@ -1903,6 +1908,51 @@ body {
   top: 20px;
   right: 20px;
   z-index: 999;
+}
+
+.btn-get-started {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #007bff;
+  border: 2px solid #007bff;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.btn-get-started:hover {
+  background: none;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #007bff;
+  background: transparent;
+  border: 2px solid #007bff;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-services:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Adjust based on your header height */
 }
 
 @media (max-width: 768px) {

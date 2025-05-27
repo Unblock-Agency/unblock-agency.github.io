@@ -18,6 +18,25 @@
     gtag('config', 'G-RDT61WL7ZC');
   </script>
 
+  <script>
+    // Smooth scroll with custom duration
+    document.querySelectorAll('a.scrollto').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          const offsetTop = target.offsetTop;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
 
   <!-- Calendly badge widget begin -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -97,37 +116,44 @@
 
   
     <!--==========================
-      Pilot Intro Section
+    Pilot Intro Section
     ============================-->
     <section id="pilot-intro">
-    <div class="container">
+      <div class="container">
 
-      <div class="pilot-intro-content">
-      <!-- Left text area -->
-      <div class="pilot-text">
-        <div class="pilot-heading">
-          <h3>BUILD A HIGH PERFORMING SOFTWARE TEAM WITH UNBLOCK AGENCY!</h3>
-          <h4>We’re selecting 5 companies to join our 6 month pilot program.</h4>
+        <div class="pilot-intro-content">
+          <!-- Left text area -->
+          <div class="pilot-text">
+            <div class="pilot-heading">
+              <h3>BUILD A SOFTWARE TEAM THAT DELIVERS IN JUST 6 MONTHS!</h3>
+              <h4>We’re selecting 5 companies to join our 6 month pilot program.</h4>
+
+              <!-- New button row -->
+              <div class="pilot-cta-buttons">
+                <a href="#calendly-inline-widget" class="btn-get-started scrollto">Get Started</a>
+                <a href="#whats-happening" class="btn-services scrollto">Learn More</a>
+              </div>
+            </div>
+
+            <div class="pilot-buttons">
+              <a href="#whats-happening" class="btn-pilot">What's Happening</a>
+              <a href="#why-not" class="btn-pilot">Why Not</a>
+              <a href="#calendly-inline-widget" class="btn-pilot contact-btn">Contact Us</a>
+              <a href="#what-to-expect" class="btn-pilot">What You Can Expect</a>
+              <a href="#pilot-program-milestones" class="btn-pilot">Milestones</a>
+              <a href="#key-deliverables" class="btn-pilot">Deliverables</a>
+            </div>
+          </div>
+
+          <!-- Right image area -->
+          <div class="pilot-image-container">
+            <img src="img/pilot/Aritro Work.png" alt="Pilot Program Image" class="pilot-image" />
+          </div>
         </div>
 
-        <div class="pilot-buttons">
-          <a href="#whats-happening" class="btn-pilot">What's Happening</a>
-          <a href="#why-not" class="btn-pilot">Why Not</a>
-          <a href="#calendly-inline-widget" class="btn-pilot contact-btn">Contact Us</a>
-          <a href="#what-to-expect" class="btn-pilot">What You Can Expect</a>
-          <a href="#pilot-program-milestones" class="btn-pilot">Milestones</a>
-          <a href="#key-deliverables" class="btn-pilot">Deliverables</a>
-        </div>
       </div>
+    </section>
 
-        <!-- Right image area -->
-        <div class="pilot-image-container">
-          <img src="img/pilot/Aritro Work.png" alt="Pilot Program Image" class="pilot-image" />
-        </div>
-      </div>
-
-    </div>
-  </section>
 
 
     <!--==========================
@@ -136,8 +162,9 @@
     <section id="whats-happening">
       <div class="container">
         <h2>WHAT'S HAPPENING?</h2>
-        <h3>For a limited time, Unblock Agency is offering a <span class="bold-blue">6-month pilot program</span> to select startups. <span class="bold-blue">In exchange for detailed feedback and a testimonial</span>, we’re providing our full suite of project management services <span class="bold-blue">free of charge!</span></h3>
-        <h3>Running a startup is overwhelming, and managing a tech team on top of everything else can be a huge drain on your time. This program gives you the space to focus on growing your business while we handle the <strong>day-to-day complexities of your tech team</strong>—so you can move faster without burning out.</h3>
+        <h3>For a limited time, Unblock Agency is offering a <span class="bold-blue">6-month pilot program</span> to select startups. <span class="bold-blue">In exchange for detailed feedback and a testimonial</span>, we’re providing our full suite of project management services <span class="bold-blue">for 80% off!</span></h3>
+        <h3>Usually $5000/month. For pilot program clients, <span class="bold-blue">$1000 month!</span></h3>
+       <h3>Running a startup is <span class="bold-red">overwhelming</span>, and managing a tech team on top of everything else can be a <span class="bold-red">huge drain</span> on your time. This program gives you the space to focus on growing your business while we handle the <strong>day-to-day complexities of your tech team</strong>—so you can move faster without burning out.</h3>
         <h3><span class="bold-blue">All you have to do is show up to a 2-hour meeting every other week.</span> We handle the rest.</h3>
       </div>
       
@@ -156,8 +183,8 @@
           </div>
   
           <div class="faq-item">
-              <h3>2. It's free? That's a bit weird.</h3>
-              <p>Trust is a two-way street. As a new name in the field, we understand <strong>the risk you take</strong> in joining an unproven service provider. At the same time, <strong>we take on the risk</strong> of offering our services free of charge, confident in the value we can deliver. This pilot program is designed to minimize those risks: <strong>all we ask is detailed feedback and, if we meet your expectations, a testimonial.</strong> If we succeed, <strong>we both win</strong>: you gain a transformed team, and we gain your endorsement.</p>
+              <h3>2. It's discounted? That's a bit weird.</h3>
+              <p>Trust is a two-way street. As a new name in the field, we understand <strong>the risk you take</strong> in joining an unproven service provider. At the same time, <strong>we take on the risk</strong> of offering our services heavily dicounted, confident in the value we can deliver. This pilot program is designed to minimize those risks: <strong>all we ask is detailed feedback and, if we meet your expectations, a testimonial.</strong> If we succeed, <strong>we both win</strong>: you gain a transformed team, and we gain your endorsement.</p>
           </div>
       </div>
     </section>
@@ -352,33 +379,37 @@
                 <h2>KEY DELIVERABLES THROUGHOUT THE PILOT PROGRAM</h2>
                 
                 <!-- Deliverable Cards with Number Icons -->
-                <div class="deliverable-card">
+                 <div class="deliverable-card">
                     <span class="number-icon">1</span>
-                    <p><strong>Regular Sprint Cycles:</strong> Continuous improvement via planning, reviews, and retrospectives, with two sprints per month.</p>
+                    <p><strong>Consistent Software Delivery:</strong> We help teams ship software predictably and on time—every sprint, every month.</p>
                 </div>
                 <div class="deliverable-card">
                     <span class="number-icon">2</span>
-                    <p><strong>Capacity and Goal Tracking:</strong> Ongoing adjustments to ensure alignment and capacity are optimized.</p>
+                    <p><strong>Capacity and Goal Tracking:</strong> Ongoing adjustments to ensure timeslines are accurate.</p>
                 </div>
                 <div class="deliverable-card">
                     <span class="number-icon">3</span>
-                    <p><strong>Role Clarity and Team Norms:</strong> Detailed reports on team roles and responsibilities for better collaboration.</p>
+                    <p><strong>Regular Sprint Cycles:</strong> Continuous improvement via planning, reviews, and retrospectives, with two sprints per month.</p>
                 </div>
                 <div class="deliverable-card">
                     <span class="number-icon">4</span>
-                    <p><strong>Conflict Resolution:</strong> Effective systems in place to ensure healthy team dynamics.</p>
+                    <p><strong>Role Clarity and Team Norms:</strong> Detailed clarification on team roles and responsibilities for better collaboration.</p>
                 </div>
                 <div class="deliverable-card">
                     <span class="number-icon">5</span>
-                    <p><strong>User Feedback Integration:</strong> Improved product development based on end-user feedback.</p>
+                    <p><strong>Conflict Resolution:</strong> Effective systems in place to ensure healthy team dynamics.</p>
                 </div>
                 <div class="deliverable-card">
                     <span class="number-icon">6</span>
-                    <p><strong>Team Performace and Well-Being Metrics:</strong> Insights into team efficiency and morale, ensuring sustainable, high-performance levels.</p>
+                    <p><strong>User Feedback Integration:</strong> Improved product development based on end-user feedback.</p>
                 </div>
                 <div class="deliverable-card">
                     <span class="number-icon">7</span>
-                    <p><strong>Celebration of Success:</strong> Continuous focus on team morale and well-being.</p>
+                    <p><strong>Team Performace and Well-Being Metrics:</strong> Insights into team efficiency and morale, ensuring sustainable, high-performance levels.</p>
+                </div>
+                <div class="deliverable-card">
+                    <span class="number-icon">8</span>
+                    <p><strong>Celebration of Success:</strong> It is important to celebrate the wins.</p>
                 </div>
                 
                 <!-- Additional Lines Below the Cards -->
