@@ -251,6 +251,44 @@ section h2 {
   color: #283d50;
 }
 
+/* Dropdown base */
+.main-nav ul li.drop-down {
+  position: relative;
+}
+
+/* Hide submenu by default */
+.main-nav ul li.drop-down ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 220px;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Show on hover */
+.main-nav ul li.drop-down:hover > ul {
+  display: block;
+}
+
+/* Submenu links */
+.main-nav ul li.drop-down ul li a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.main-nav ul li.drop-down ul li a:hover {
+  background-color: #f6f6f6;
+  color: #0069FF;
+}
+
 /* Login Button Styling */
 .btn-login {
   background: #007bff; /* Same blue color */
