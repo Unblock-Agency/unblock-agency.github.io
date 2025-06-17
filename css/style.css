@@ -2027,6 +2027,23 @@ html {
   display: block;
 }
 
+.btn-download {
+  background-color: #0069FF;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-download:hover {
+  background-color: #0050cc;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* Show menu button */
