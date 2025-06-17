@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Readiness Checklist | Unblock Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header" class="fixed-top">
+    <div class="container">
+      <div class="logo float-left">
+        <a href="index.html#intro" class="scrollto">
+          <img src="img/UA Text No Logo.png" alt="Logo" class="img-fluid">
+        </a>
+      </div>
+      <nav class="main-nav float-right d-none d-lg-block">
+       <ul>
+        <li><a href="index.html#intro">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Process</a></li>
+        <li><a href="index.html#why-us">Services</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
+
+        <!-- Dropdown Menu -->
+        <li class="drop-down">
+            <a href="#">Free Resources</a>
+            <ul>
+            <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
+            <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
+            <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+
+      </nav>
+    </div>
+  </header>
+    <div class="pilot-buttons">
+    <a href="#why-estimation" class="btn-pilot">Why Estimate</a>
+    <a href="#hours-vs-points" class="btn-pilot">Hours vs Story Points</a>
+    <a href="#when-how" class="btn-pilot">When & How</a>
+    <a href="#capacity" class="btn-pilot">Capacity Planning</a>
+    <a href="#mistakes" class="btn-pilot">Mistakes to Avoid</a>
+    <a href="#summary" class="btn-pilot">Wrap-Up</a>
+    </div>
+
+
+  <!-- Page Content -->
+  <main id="main" style="margin-top: 120px;">
+    <section id="how-to-estimate">
+        <div class="container">
+            <h1>How to Estimate Software Delivery</h1>
+
+            <p>Estimating software delivery timelines is a critical part of managing a startup engineering team. Done right, it gives founders the confidence to plan and execute without constantly putting out fires. This guide walks you through how to do it accurately—using our Capacity Planning Sheet as your foundation.</p>
+
+            <h2>Why Estimation Matters</h2>
+            <p>For early-stage startups, misestimating timelines can lead to delayed launches, missed opportunities, and overwhelmed teams. Accurate forecasting helps you stay lean and organized while building quality products quickly. Our method ensures your team is focused, accountable, and delivering on what matters.</p>
+
+            <h2>When to Estimate</h2>
+            <p>Estimation occurs during Sprint Planning. Ideally, before the planning meeting, product owners and leads prepare a prioritized task list. During the meeting, each ticket is reviewed, discussed, and estimated. These estimates are then compared to the team’s available capacity for the sprint.</p>
+
+            <h2>Choosing Your Estimation Unit</h2>
+            <ul>
+            <li><strong>Junior Teams:</strong> Use hours for clarity and specificity.</li>
+            <li><strong>Senior Teams:</strong> Use story points for flexibility and abstraction.</li>
+            </ul>
+            <p>In either case, consistency and understanding across the team are key.</p>
+
+            <h2>How to Use the Capacity Planning Sheet</h2>
+            <img src="img/estimate/Team Capacity Sheet Template Pic.png" alt="Team Capacity Planning Sheet Overview" style="width:100%; margin: 30px 0; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+
+            <h3>1. Sprint Configuration</h3>
+            <img src="img/estimate/Sprint Configuration.png" alt="Sprint Configuration Section" style="width:80%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+            <p>This section defines the overall sprint parameters and working context. Fill out the following fields:</p>
+            <ul>
+            <li><strong>Number of Days in Sprint:</strong> Usually 10 (for two-week sprints).</li>
+            <li><strong>Working Day (in hours):</strong> Typically 8 hours.</li>
+            <li><strong>Company Holidays:</strong> Days off due to holidays.</li>
+            <li><strong>Lost Work Days:</strong> Sprint delays or early closures.</li>
+            <li><strong>Time for Sprint Ceremonies:</strong> Est. hours per person (e.g., 2-3 hrs).</li>
+            <li><strong>Time for Daily Standups:</strong> Usually 0.25 hrs x number of days.</li>
+            <li><strong>Non-Admin %:</strong> Time available for actual development (default 80%).</li>
+            </ul>
+
+            <h3>2. Team PTO</h3>
+            <img src="img/estimate/Team PTO.png" alt="Team PTO Section" style="width:50%; margin: 20px auto; display: block; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+            <p>List each team member and how many full days they are taking off during the sprint. This directly impacts their availability and is factored into the next section.</p>
+
+            <h3>3. Team Capacity Configuration</h3>
+            <img src="img/estimate/Team Capacity Configuration.png" alt="Team Capacity Configuration Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+            <p>This calculates each team member’s total available hours:</p>
+            <ul>
+            <li><strong>PTO Hours:</strong> Days off multiplied by daily working hours.</li>
+            <li><strong>Ceremony/Standup Time:</strong> From the configuration above.</li>
+            <li><strong>Non-Admin Time:</strong> 80% of working hours minus ceremonies and PTO.</li>
+            <li><strong>Availability:</strong> Final number of hours available to write code or design features.</li>
+            </ul>
+            <p>The sheet is color-coded by department (e.g., design, engineering, QA) and each member has a column. This gives you a full snapshot of team-wide capacity.</p>
+
+            <h3>4. Tickets in Sprint and Estimates</h3>
+            <img src="img/estimate/Tickets in the Sprint and Estimates.png" alt="Sprint Tickets and Estimates Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+            <p>During Sprint Planning:</p>
+            <ul>
+            <li>Review prioritized tasks from your task manager (e.g., Linear, Jira).</li>
+            <li>Assign each task to a specific team member.</li>
+            <li>Write the estimate (hours or story points) in the cell matching the team member and ticket.</li>
+            </ul>
+            <p>By the end of the meeting, every member has clearly defined work with time estimates that match their available hours.</p>
+
+            <h3>5. Team Sprint Allocation / Utilization</h3>
+            <img src="img/estimate/Team Sprint Allocation:Utilization.png" alt="Team Sprint Utilization Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+            <p>This last section summarizes how well you’ve allocated your team:</p>
+            <ul>
+            <li><strong>Total Hours Allocated:</strong> Sum of assigned estimates per person.</li>
+            <li><strong>Total Hours Remaining:</strong> Difference between capacity and allocation.</li>
+            <li><strong>Sprint Utilization:</strong> Percentage of team capacity filled.</li>
+            </ul>
+            <p>If a developer is at 100%, they’re fully booked. If someone is below 80%, consider redistributing work. If over 100%, they’re likely to burn out or miss deadlines.</p>
+
+            <h2>Final Notes</h2>
+            <p>The Capacity Planning Sheet doesn’t just help you plan—it helps you communicate. It becomes a source of truth during reviews, and a planning tool for founders who want to stay focused on outcomes, not the chaos of task-level execution.</p>
+            <p>Download the sheet, customize it for your team, and use it as part of every sprint cycle. It will transform how you approach delivery, team health, and business timelines.</p>
+            <div class="pilot-cta-buttons" style="text-align: center; margin-top: 30px; margin-bottom: 60px;">
+                <a href="downloads/Team Capacity Sheet Template.xlsx" class="btn-get-started" download>
+                    Download the Capacity Planning Sheet
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+  </main>
+
+<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h3>Unblock Agency</h3>
+            <p>Unblock Agency is a consulting firm that specializes in helping early to mid-stage startups build high-performing teams without sacrificing the well-being of its team members.</p>
+            <p>We empower startups with effective project management systems to help teams build great software products without the need of hiring a full-time project manager.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Phoenix, AZ<br>
+              United States <br>
+              <strong>Phone:</strong> +1 (347) 469-0862<br>
+              <strong>Email:</strong> hi@unblockagency.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://twitter.com/unblockagency" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/unblockagency" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/unblockagency/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/unblockagency" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="index.html#intro">Home</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#services">Process</a></li>
+              <li><a href="index.html#why-us">Services</a></li>
+              <li><a href="index.html#team">Team</a></li>
+              <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Free Resources</h4>
+            <ul>
+                <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
+                <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
+                <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit</a></li>
+            </ul>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Unblock Agency, LLC</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+</body>
+</html>
