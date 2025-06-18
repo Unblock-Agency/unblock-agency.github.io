@@ -1,18 +1,75 @@
+<!-- Startup Software Delivery Kit (Video Course) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Delivery Readiness Checklist | Unblock Agency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Startup Software Delivery Kit (Video Course)</title>
+  <link rel="stylesheet" href="style.css">
   <!-- Styles -->
   <link href="css/style.css" rel="stylesheet">
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .video-course-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 100px auto 50px auto;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .lesson-list {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lesson-list button {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      border-left: 4px solid transparent;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .lesson-list button:hover,
+    .lesson-list button.active {
+      background-color: #e6f0ff;
+      border-left: 4px solid #007bff;
+    }
+
+    .video-player {
+      width: 70%;
+    }
+
+    .video-player iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
+<!-- Header -->
   <header id="header" class="fixed-top">
     <div class="container">
       <div class="logo float-left">
@@ -47,15 +104,41 @@
     </div>
   </header>
 
-  <!-- Page Content -->
-  <main id="main" style="margin-top: 120px;">
-    <section class="container">
-      <div  data-sa-url="https://a4e4fc66-78d5-4124-b1d8-b6f9d8b2bd92.scoreapp.com/?sa_target=_top" data-sa-view="inline" style="max-width: 100%; width: 100%" data-sa-auto-height="1"></div>
-        <script src="https://static.scoreapp.com/js/integration/v1/embedding.js?v=Ttb6J2"></script>
-    </section>
-  </main>
+  <h1>Startup Software Delivery Kit (Video Course)</h1>
 
-<!--==========================
+  <div class="video-course-container">
+    <div class="lesson-list">
+      <button class="active" onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_1', this)">Start Here</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_2', this)">Delivery Readiness Checklist</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_3', this)">Set Up</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_4', this)">Sprint Meetings</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_5', this)">Assign Roles</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_6', this)">Fill the Backlog</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_7', this)">How to Estimate Software Delivery Part 1</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_8', this)">How to Estimate Software Delivery Part 2 (Sprint Planning)</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_9', this)">Everyday Check Up (Standup)</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_10', this)">End of Sprint Part 1 (Check with Stakeholders)</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_11', this)">End of Sprint Part 2 (Check with Your Team)</button>
+      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_12', this)">The End and Recap</button>
+    </div>
+
+    <div class="video-player">
+      <iframe id="videoFrame" src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    function loadVideo(url, btn) {
+      document.getElementById('videoFrame').src = url;
+
+      // Remove 'active' from all buttons
+      document.querySelectorAll('.lesson-list button').forEach(b => b.classList.remove('active'));
+
+      // Add 'active' to clicked button
+      btn.classList.add('active');
+    }
+  </script>
+  <!--==========================
     Footer
   ============================-->
   <footer id="footer">
@@ -126,6 +209,5 @@
       </div>
     </div>
   </footer><!-- #footer -->
-
 </body>
 </html>
