@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Startup Software Delivery Kit (Video Course)</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -15,16 +15,10 @@
       color: #000;
     }
 
-    h1 {
-      text-align: center;
-      margin-top: 100px;
-      font-weight: 700;
-    }
-
     .video-course-container {
       display: flex;
       max-width: 1200px;
-      margin: 50px auto;
+      margin: 100px auto 50px auto;
       gap: 40px;
       padding: 0 20px;
     }
@@ -57,179 +51,128 @@
       width: 70%;
     }
 
-    .video-player iframe {
+    .video-player .video-wrapper {
       width: 100%;
       height: 500px;
+      position: relative;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .btn-get-started {
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 10px 32px;
-      border-radius: 50px;
-      transition: 0.5s;
-      color: #fff;
-      background: #007bff;
-      border: 2px solid #007bff;
+    h1 {
       text-align: center;
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-    }
-
-    .btn-get-started:hover {
-      background: none;
-      border-color: #007bff;
-      color: #007bff;
-    }
-
-    .video-action-button {
-      text-align: center;
+      margin-top: 50px;
+      font-weight: 700;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header id="header" class="fixed-top">
-    <div class="container">
-      <div class="logo float-left">
-        <a href="index.html#intro" class="scrollto">
-          <img src="img/UA New Black.png" alt="Logo" class="img-fluid">
-        </a>
-      </div>
-      <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-          <li><a href="index.html#intro">Home</a></li>
-          <li><a href="index.html#about">About Us</a></li>
-          <li><a href="index.html#services">Process</a></li>
-          <li><a href="index.html#why-us">Services</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
-          <li class="drop-down">
-            <a href="#">Free Resources <span class="dropdown-arrow">&#9662;</span></a>
-            <ul>
-              <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
-              <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
-              <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit (Article)</a></li>
-              <li><a href="startup-software-delivery-kit-video.html">Startup Software Delivery Kit (Video Course)</a></li>
-            </ul>
-          </li>
-          <li><a href="index.html#contact">Contact Us</a></li>
-        </ul>
-      </nav>
+<!-- Header -->
+<header id="header" class="fixed-top">
+  <div class="container">
+    <div class="logo float-left">
+      <a href="index.html#intro" class="scrollto">
+        <img src="img/UA New Black.png" alt="Logo" class="img-fluid">
+      </a>
     </div>
-  </header>
-
-  <h1>Startup Software Delivery Kit (Video Course)</h1>
-
-  <div class="video-course-container">
-    <div class="lesson-list">
-      <button class="active" onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_1', this)">Start Here</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_2', this)">Delivery Readiness Checklist</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_3', this)">Set Up</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_4', this)">Sprint Meetings</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_5', this)">Assign Roles</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_6', this)">Fill the Backlog</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_7', this)">How to Estimate Software Delivery Part 1</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_8', this)">How to Estimate Software Delivery Part 2 (Sprint Planning)</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_9', this)">Everyday Check Up (Standup)</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_10', this)">End of Sprint Part 1 (Check with Stakeholders)</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_11', this)">End of Sprint Part 2 (Check with Your Team)</button>
-      <button onclick="loadVideo('https://www.youtube.com/embed/VIDEO_ID_12', this)">The End and Recap</button>
-    </div>
-
-    <div class="video-player">
-      <iframe id="videoFrame" src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-      <div class="video-action-button">
-        <a id="lesson-action-btn" class="btn-get-started" style="display: none;" href="#" target="_blank">Call to Action</a>
-      </div>
-    </div>
+    <nav class="main-nav float-right d-none d-lg-block">
+      <ul>
+        <li><a href="index.html#intro">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Process</a></li>
+        <li><a href="index.html#why-us">Services</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
+        <li class="drop-down">
+          <a href="#">Free Resources <span class="dropdown-arrow">&#9662;</span></a>
+          <ul>
+            <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
+            <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
+            <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit (Article)</a></li>
+            <li><a href="startup-software-delivery-kit-video.html">Startup Software Delivery Kit (Video Course)</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
-  <script>
-    function loadVideo(url, btn) {
-      const frame = document.getElementById('videoFrame');
-      const button = document.getElementById('lesson-action-btn');
-      const lessonTitle = btn.innerText.trim();
+<h1>Startup Software Delivery Kit (Video Course)</h1>
 
-      frame.src = url;
-      document.querySelectorAll('.lesson-list button').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+<div class="video-course-container">
+  <div class="lesson-list">
+    <button class="active" onclick="loadVideo(0, this)">Start Here</button>
+    <button onclick="loadVideo(1, this)">Delivery Readiness Checklist</button>
+    <button onclick="loadVideo(2, this)">Set Up</button>
+    <button onclick="loadVideo(3, this)">Sprint Meetings</button>
+    <button onclick="loadVideo(4, this)">Assign Roles</button>
+    <button onclick="loadVideo(5, this)">Fill the Backlog</button>
+    <button onclick="loadVideo(6, this)">How to Estimate Software Delivery Part 1</button>
+    <button onclick="loadVideo(7, this)">How to Estimate Software Delivery Part 2 (Sprint Planning)</button>
+    <button onclick="loadVideo(8, this)">Everyday Check Up (Standup)</button>
+    <button onclick="loadVideo(9, this)">End of Sprint Part 1 (Check with Stakeholders)</button>
+    <button onclick="loadVideo(10, this)">End of Sprint Part 2 (Check with Your Team)</button>
+    <button onclick="loadVideo(11, this)">The End and Recap</button>
+  </div>
+  <div class="video-player">
+    <div class="video-wrapper" id="videoContainer"></div>
+    <div id="extraButton" style="margin-top: 20px; text-align: center;"></div>
+  </div>
+</div>
 
-      if (lessonTitle === 'Delivery Readiness Checklist') {
-        button.style.display = 'inline-block';
-        button.href = 'https://aritro-hy3gsl16.scoreapp.com/';
-        button.innerText = 'Take the Delivery Readiness Checklist';
-        button.target = '_blank';
-      } else if (lessonTitle === 'How to Estimate Software Delivery Part 1') {
-        button.style.display = 'inline-block';
-        button.href = 'Team%20Capacity%20Sheet%20Template.xlsx'; // use %20 for spaces in URLs
-        button.innerText = 'Download Capacity Planning Template';
-        button.target = '_blank';
-        button.setAttribute('download', 'Team Capacity Sheet Template.xlsx');
-      } else {
-        button.style.display = 'none';
-      }
-    }
-  </script>
+<script>
+const videos = [
+  `https://www.loom.com/embed/3e266b3a698c4d19a9c3dc3ec9c7b753`,
+  `https://www.loom.com/embed/2aec6e515aad47ec8665732ddd04e40e`,
+  `https://www.loom.com/embed/ab5cebd4665d47999a1b8df907e2b4f9`,
+  `https://www.loom.com/embed/ecc35b97899d49dc98e7184d05bb33dc`,
+  `https://www.loom.com/embed/219339eb40e74df1aa71f9c93fc2ce6d`,
+  `https://www.loom.com/embed/0bf2eb6fb6d54651a5f2f9bfda033a6f`,
+  `https://www.loom.com/embed/3151ca15605c4eb78e2a0d2393123838`,
+  `https://www.loom.com/embed/37b9d5c149c94c6dbe318449ac4dddf9`,
+  `https://www.loom.com/embed/9dbcd0c098704efe934efa8405927c6c`,
+  `https://www.loom.com/embed/ac923932ea074a1194a27830f04e2fe9`,
+  `https://www.loom.com/embed/5e9f10f6827e4002ad2b49253046c187`,
+  `https://www.loom.com/embed/1f1c6a5ebaa24785b5656ddff63b7b0f`
+];
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 footer-info">
-            <h3>Unblock Agency</h3>
-            <p>Unblock Agency is a consulting firm that specializes in helping early to mid-stage startups build high-performing teams without sacrificing the well-being of its team members.</p>
-            <p>We empower startups with effective project management systems to help teams build great software products without the need of hiring a full-time project manager.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>Phoenix, AZ<br>United States<br><strong>Phone:</strong> +1 (347) 469-0862<br><strong>Email:</strong> hi@unblockagency.com</p>
-            <div class="social-links">
-              <a href="https://twitter.com/unblockagency" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/unblockagency" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/unblockagency/" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/unblockagency" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><a href="index.html#intro">Home</a></li>
-              <li><a href="index.html#about">About Us</a></li>
-              <li><a href="index.html#services">Process</a></li>
-              <li><a href="index.html#why-us">Services</a></li>
-              <li><a href="index.html#team">Team</a></li>
-              <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
-              <li><a href="index.html#contact">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Free Resources</h4>
-            <ul>
-              <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
-              <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
-              <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit</a></li>
-              <li><a href="startup-software-delivery-kit-video.html">Video Course</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Unblock Agency, LLC</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer>
+function loadVideo(index, btn) {
+  const container = document.getElementById('videoContainer');
+  const extra = document.getElementById('extraButton');
+
+  container.innerHTML = `<iframe src="${videos[index]}" allowfullscreen style="position: absolute; top:0; left:0; width:100%; height:100%;"></iframe>`;
+
+  document.querySelectorAll('.lesson-list button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  extra.innerHTML = '';
+
+  if (index === 1) {
+    extra.innerHTML = `<a href="https://aritro-hy3gsl16.scoreapp.com/" target="_blank" class="btn-get-started">Open Scorecard</a>`;
+  } else if (index === 6) {
+    extra.innerHTML = `<a href="Team Capacity Sheet Template.xlsx" download class="btn-get-started">Download Capacity Planning Sheet</a>`;
+  }
+}
+
+// Load first video by default
+window.onload = () => {
+  loadVideo(0, document.querySelector('.lesson-list button'));
+};
+</script>
+
+<!-- Footer -->
+<footer id="footer">...</footer>
+
 </body>
 </html>
