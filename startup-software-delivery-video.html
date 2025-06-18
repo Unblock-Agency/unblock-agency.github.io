@@ -1,15 +1,13 @@
-<!-- Startup Software Delivery Kit (Video Course) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Startup Software Delivery Kit (Video Course)</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Styles -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -17,10 +15,16 @@
       color: #000;
     }
 
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      font-weight: 700;
+    }
+
     .video-course-container {
       display: flex;
       max-width: 1200px;
-      margin: 100px auto 50px auto;
+      margin: 50px auto;
       gap: 40px;
       padding: 0 20px;
     }
@@ -61,15 +65,36 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    .btn-get-started {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 32px;
+      border-radius: 50px;
+      transition: 0.5s;
+      color: #fff;
+      background: #007bff;
+      border: 2px solid #007bff;
       text-align: center;
-      margin-top: 50px;
-      font-weight: 700;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .btn-get-started:hover {
+      background: none;
+      border-color: #007bff;
+      color: #007bff;
+    }
+
+    .video-action-button {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-<!-- Header -->
+
+  <!-- Header -->
   <header id="header" class="fixed-top">
     <div class="container">
       <div class="logo float-left">
@@ -78,28 +103,24 @@
         </a>
       </div>
       <nav class="main-nav float-right d-none d-lg-block">
-       <ul>
-        <li><a href="index.html#intro">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#services">Process</a></li>
-        <li><a href="index.html#why-us">Services</a></li>
-        <li><a href="index.html#team">Team</a></li>
-        <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
-
-        <!-- Dropdown Menu -->
-        <li class="drop-down">
+        <ul>
+          <li><a href="index.html#intro">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Process</a></li>
+          <li><a href="index.html#why-us">Services</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="pilot.html">Pilot Program <span class="new-badge">NEW</span></a></li>
+          <li class="drop-down">
             <a href="#">Free Resources <span class="dropdown-arrow">&#9662;</span></a>
             <ul>
-            <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
-            <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
-            <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit (Article)</a></li>
-            <li><a href="startup-software-delivery-kit-video.html">Startup Software Delivery Kit (Video Course)</a></li>
+              <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
+              <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
+              <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit (Article)</a></li>
+              <li><a href="startup-software-delivery-kit-video.html">Startup Software Delivery Kit (Video Course)</a></li>
             </ul>
-        </li>
-
-        <li><a href="index.html#contact">Contact Us</a></li>
-    </ul>
-
+          </li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -124,43 +145,52 @@
 
     <div class="video-player">
       <iframe id="videoFrame" src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      <div class="video-action-button">
+        <a id="lesson-action-btn" class="btn-get-started" style="display: none;" href="#" target="_blank">Call to Action</a>
+      </div>
     </div>
   </div>
 
   <script>
     function loadVideo(url, btn) {
-      document.getElementById('videoFrame').src = url;
+      const frame = document.getElementById('videoFrame');
+      const button = document.getElementById('lesson-action-btn');
+      const lessonTitle = btn.innerText.trim();
 
-      // Remove 'active' from all buttons
+      frame.src = url;
       document.querySelectorAll('.lesson-list button').forEach(b => b.classList.remove('active'));
-
-      // Add 'active' to clicked button
       btn.classList.add('active');
+
+      if (lessonTitle === 'Delivery Readiness Checklist') {
+        button.style.display = 'inline-block';
+        button.href = 'https://aritro-hy3gsl16.scoreapp.com/';
+        button.innerText = 'Take the Delivery Readiness Checklist';
+        button.target = '_blank';
+      } else if (lessonTitle === 'How to Estimate Software Delivery Part 1') {
+        button.style.display = 'inline-block';
+        button.href = 'Team%20Capacity%20Sheet%20Template.xlsx'; // use %20 for spaces in URLs
+        button.innerText = 'Download Capacity Planning Template';
+        button.target = '_blank';
+        button.setAttribute('download', 'Team Capacity Sheet Template.xlsx');
+      } else {
+        button.style.display = 'none';
+      }
     }
   </script>
-  <!--==========================
-    Footer
-  ============================-->
+
+  <!-- Footer -->
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-4 col-md-6 footer-info">
             <h3>Unblock Agency</h3>
             <p>Unblock Agency is a consulting firm that specializes in helping early to mid-stage startups build high-performing teams without sacrificing the well-being of its team members.</p>
             <p>We empower startups with effective project management systems to help teams build great software products without the need of hiring a full-time project manager.</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
-            <p>
-              Phoenix, AZ<br>
-              United States <br>
-              <strong>Phone:</strong> +1 (347) 469-0862<br>
-              <strong>Email:</strong> hi@unblockagency.com<br>
-            </p>
-
+            <p>Phoenix, AZ<br>United States<br><strong>Phone:</strong> +1 (347) 469-0862<br><strong>Email:</strong> hi@unblockagency.com</p>
             <div class="social-links">
               <a href="https://twitter.com/unblockagency" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="https://www.facebook.com/unblockagency" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -168,7 +198,6 @@
               <a href="https://www.linkedin.com/company/unblockagency" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
-
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Links</h4>
             <ul>
@@ -184,30 +213,23 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Free Resources</h4>
             <ul>
-                <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
-                <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
-                <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit</a></li>
+              <li><a href="delivery-readiness-checklist.html">Delivery Readiness Checklist</a></li>
+              <li><a href="how-to-estimate-software-delivery.html">How to Estimate Software Delivery</a></li>
+              <li><a href="startup-software-delivery-kit.html">Startup Software Delivery Kit</a></li>
+              <li><a href="startup-software-delivery-kit-video.html">Video Course</a></li>
             </ul>
-            </div>
-
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>Unblock Agency, LLC</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-        -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- #footer -->
+  </footer>
 </body>
 </html>
