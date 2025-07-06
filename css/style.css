@@ -2119,6 +2119,21 @@ html {
   max-width: 100%;
 }
 
+blockquote {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 5px solid #000000;
+  display:inline-flex;
+} 
+
+blockquote span {
+  margin-top:-10px;
+  margin-bottom:-10px;
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/

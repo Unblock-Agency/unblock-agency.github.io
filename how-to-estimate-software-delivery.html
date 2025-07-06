@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Delivery Readiness Checklist | Unblock Agency</title>
+  <title>How to Estimate | Unblock Agency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Styles -->
@@ -61,22 +61,72 @@
         <div class="article-container">
             <h1>How to Estimate Software Delivery</h1>
 
-            <p>Estimating software delivery timelines is a critical part of managing a startup engineering team. Done right, it gives founders the confidence to plan and execute without constantly putting out fires. This guide walks you through how to do it accurately—using our Capacity Planning Sheet as your foundation.</p>
+            <p>If you're building software at a startup, there's one truth you can count on:</p>
+            
+            <br>
+            
+            <blockquote><span><strong>You can't deliver on time if you don't know <u>what</u> you're building or how long it will take.</strong></span></blockquote>
+            <br>
+            <br>
 
-            <h2 id="why-estimation">Why Estimation Matters</h2>
-            <p>For early-stage startups, misestimating timelines can lead to delayed launches, missed opportunities, and overwhelmed teams. Accurate forecasting helps you stay lean and organized while building quality products quickly. Our method ensures your team is focused, accountable, and delivering on what matters.</p>
-
-            <h2 id="when-how">When to Estimate</h2>
-            <p>Estimation occurs during Sprint Planning. Ideally, before the planning meeting, product owners and leads prepare a prioritized task list. During the meeting, each ticket is reviewed, discussed, and estimated. These estimates are then compared to the team’s available capacity for the sprint.</p>
-
-            <h2 id="hours-vs-points">Choosing Your Estimation Unit</h2>
+            <p>That’s where estimation comes in. When done right, you’ll be able to:</p>
             <ul>
-            <li><strong>Junior Teams:</strong> Use hours for clarity and specificity.</li>
-            <li><strong>Senior Teams:</strong> Use story points for flexibility and abstraction.</li>
+              <li>Forecast launches more confidently</li>
+              <li>Keep your team aligned and focused</li>
+              <li>Avoid over-promising and burning out your developers</li>
             </ul>
-            <p>In either case, consistency and understanding across the team are key.</p>
+            <br>
+            <p>And the good news? You only need 3 things:</p>
+            <ul>
+              <li>A task manager (like Notion, Jira, Trello, etc.)</li>
+              <li>2 short planning meetings</li>
+              <li>A spreadsheet (which we’ll give you)</li>
+            </ul>
 
-            <h2 id="capacity">How to Use the Capacity Planning Sheet</h2>
+            <h2 id="estimation-formula">The Estimation Formula</h2>
+            <p>At its core, estimating software delivery comes down to this:</p>
+            <p><center><strong>Tasks to complete</strong> + <strong>Team’s available time</strong> = <strong>Your estimate</strong></center></p>
+            <p>Obvious, I know, but actually to do this, we'll break it into two parts:</p>
+            <ol>
+              <li>Know what needs to get done (your <strong>roadmap</strong>)</li>
+              <li>Know what your team can actually do in a sprint (their <strong>capacity</strong>)</li>
+            </ol>
+
+            <h2 id="what-building">Step 1: Clarify What You’re Building</h2>
+            <p>Before you can plan sprints or write estimates, your team needs to know what they’re building and why.</p>
+            <h3>✍️ Set up your roadmap</h3>
+              <p>Use a tool your team already knows: Notion, Trello, Jira, ClickUp—whatever. What matters is that everyone has access and can see what’s coming.</p>
+              <p>To save you time, <a href="https://www.notion.com/templates/notion-product-roadmap" target="_blank">here’s a free Notion template</a> that includes:</p>
+              <ul><ul>
+                <li>GANTT-style roadmap</li>
+                <li>Task table with embedded fields</li>
+                <li>Priority tagging and owner fields</li>
+              </ul></ul>
+            <h3>🔎 Schedule and Facilitate a Product Planning Meeting (meeting 1/2)</h3>
+              <p>Invite your:</p>
+              <ul><ul>
+                <li>Tech lead</li>
+                <li>Product Owner / Head of Product / UX designer</li>
+                <li>Stakeholders</li>
+              </ul></ul>
+              <p><strong>The goal:</strong> Agree on what needs to be built for the next milestone (aka "version").</p>
+              <p>Duration: 2 hours (It shouldn't take more than 2 hours. When you start, it'll take the full 2 but once you get used to it, it'll only take 1 to 1.5 hours)</p>
+              <p>Use this agenda</p>
+              <pre><code>
+                Agenda:
+                - What’s the core version of our product we want to ship?
+                - What tasks or features must be included?
+                - Are there any dependencies or blockers?
+                - What’s the rough target date for launch?
+              </code></pre>
+            
+            <p>Someone should take notes and write the agreed-upon features as tasks into your task manager. If you know your task manager well, then you can </p>
+            <blockquote><span><strong>✨ Tip: Keep it lean. Don’t add everything you want; just what you need to ship.</strong></span></blockquote>
+
+
+            <h2 id="capacity">Step 2: Estimate Your Team’s Capacity</h2>
+            <p>Now that you know the work, you need to know how much your team can realistically get done. Let's measure your team's capacity!</p>
+            <h3>📈 How to Use the Capacity Planning Sheet</h2>
             <div class="pilot-cta-buttons" style="text-align: center; margin-top: 30px; margin-bottom: 60px;">
                 <a href="downloads/Team Capacity Sheet Template.xlsx" class="btn-get-started" download>
                     Download the Capacity Planning Sheet
@@ -84,9 +134,9 @@
             </div>
             <img src="img/estimate/Team Capacity Sheet Template Pic.png" alt="Team Capacity Planning Sheet Overview" style="width:100%; margin: 30px 0; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
 
-            <h3>1. Sprint Configuration</h3>
+            <h3>1. 🏋️️ Sprint Configuration</h3>
             <img src="img/estimate/Sprint Configuration.png" alt="Sprint Configuration Section" style="width:80%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-            <p>This section defines the overall sprint parameters and working context. Fill out the following fields:</p>
+            <p>This section defines the overall sprint parameters and working context. Fill out this first:</p>
             <ul>
             <li><strong>Number of Days in Sprint:</strong> Usually 10 (for two-week sprints).</li>
             <li><strong>Working Day (in hours):</strong> Typically 8 hours.</li>
@@ -97,13 +147,16 @@
             <li><strong>Non-Admin %:</strong> Time available for actual development (default 80%).</li>
             </ul>
 
-            <h3>2. Team PTO</h3>
+            <h3>2. 🌴 Team PTO</h3>
             <img src="img/estimate/Team PTO.png" alt="Team PTO Section" style="width:50%; margin: 20px auto; display: block; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-            <p>List each team member and how many full days they are taking off during the sprint. This directly impacts their availability and is factored into the next section.</p>
+            <p>List each team member and how many full days they are taking off during the sprint. This directly impacts their availability and is factored into the next section. I usually just write the dates out like if Team Member 1 is Tonny and he has 1/15/25, 1/17/25, 1/21/25 off. I list those dates down here.</p>
 
             <h3>3. Team Capacity Configuration</h3>
             <img src="img/estimate/Team Capacity Configuration.png" alt="Team Capacity Configuration Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-            <p>This calculates each team member’s total available hours:</p>
+            <p><strong>First:</strong> Change all the place holder team members with your own team and the group them by department (if you so choose - e.g. frontend, backend, QA, etc.)</p>
+            <p><strong>Second:</strong> Input the "Number of PTO days in Sprint" row for each team member. To collect the info, either message the team before you hold the sprint planning meeting with your team or collect it during the planning meeting. I would recommend doing it before so you do not waste time during planning.</p>
+            <p><strong>Next:</strong> Let the sheet do the rest!</p>
+            <p>This calculates each team member’s total available hours using what you inputed and these:</p>
             <ul>
             <li><strong>PTO Hours:</strong> Days off multiplied by daily working hours.</li>
             <li><strong>Ceremony/Standup Time:</strong> From the configuration above.</li>
@@ -112,25 +165,62 @@
             </ul>
             <p>The sheet is color-coded by department (e.g., design, engineering, QA) and each member has a column. This gives you a full snapshot of team-wide capacity.</p>
 
-            <h3>4. Tickets in Sprint and Estimates</h3>
+            <h3>4. 📥 Add Tasks to the Sprint</h3>
             <img src="img/estimate/Tickets in the Sprint and Estimates.png" alt="Sprint Tickets and Estimates Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-            <p>During Sprint Planning:</p>
+            <p>From your task manager, copy/paste the titles only of all high-priority tasks into the ticket section of the spreadsheet. You don’t need descriptions—just enough to identify them.</p>
+            <p>You do not need to fill in the other cells next to the task titles yet.</p>
+            <!-- <p><strong>Before Sprint Planning (prep): </strong></p>
+            
+            <p><strong>During Sprint Planning (more details on this later - click here):</strong></p>
             <ul>
             <li>Review prioritized tasks from your task manager (e.g., Linear, Jira).</li>
             <li>Assign each task to a specific team member.</li>
             <li>Write the estimate (hours or story points) in the cell matching the team member and ticket.</li>
             </ul>
-            <p>By the end of the meeting, every member has clearly defined work with time estimates that match their available hours.</p>
+            <p>By the end of the meeting, every member has clearly defined work with time estimates that match their available hours.</p> -->
+            <blockquote><span><strong>These are the tasks your team will estimate in the next planning meeting (this one). The cells next to the tickets are the estimates you will discuss with your team.</strong></span></blockquote>
 
-            <h3>5. Team Sprint Allocation / Utilization</h3>
+            <h3>5. 🔄 Team Sprint Allocation / Utilization</h3>
             <img src="img/estimate/Team Sprint Allocation:Utilization.png" alt="Team Sprint Utilization Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-            <p>This last section summarizes how well you’ve allocated your team:</p>
+            <p>This last section summarizes how well you’ve allocated your team. It helps you make sure your team isn’t overbooked or underused.</p>
+            <p>It updates automatically as you assign estimates. You do not need to fill out anything here.</p>
             <ul>
             <li><strong>Total Hours Allocated:</strong> Sum of assigned estimates per person.</li>
             <li><strong>Total Hours Remaining:</strong> Difference between capacity and allocation.</li>
             <li><strong>Sprint Utilization:</strong> Percentage of team capacity filled.</li>
             </ul>
             <p>If a developer is at 100%, they’re fully booked. If someone is below 80%, consider redistributing work. If over 100%, they’re likely to burn out or miss deadlines.</p>
+
+            <h2 id="sprint-planning">Step 3: Run a Sprint Planning Meeting (meeting 2/2)</h2>
+            <p>Now bring your team together for your second meeting.</p>
+            <p>Invite Your: </p>
+            <ul>
+              <li>Your entire tech team</li>
+              <li>Tech Lead</li>
+              <li>Product Owner / Head of Product / UX designer</li>
+            </ul>
+            <p>No stakeholders needed.</p>
+            <p><strong>The goal: </strong>Assign tasks to team members and estimate how long each one will take.</p>
+            <p><strong>Step 1:</strong> Double check the sprint congiguration section fields with the team. Often times people forget there is a company holiday so the third field is wrong. Just doulbe check for simple mistakes like that.</p>
+            <p><strong>Step 2:</strong> Double check with the team if there are any PTO days they have. Sometimes even if you message the team beforehand, a new PTO day comes up that has to be updated so check this with the team as well.</p>
+            <p><strong>Step 3:</strong> Enter the number of days of PTO each team member has. For isntance, from our previous example if Tonny has 1/15/25, 1/17/25, 1/21/25 off, I would write down "3" in cell B14. I would do this with all the team members and will out that row.</p>
+            <p><strong>Step 4:</strong> Now we estimate. You would got through each ticket and first, assign it to a team member, then ask how long it'll take. "Length" is determined by one of two ways.</p>
+            <ol>
+              <li><u>Story points:</u> Choose 1, 2, 3, 5, or 8 with 1 being the least effort and 8 being the most effort. Used to measure effort and not time. You assign a number that reflects how complex, risky, or big the task feels compared to others.
+                <ul>
+                  <li>The numbers usually come from the Fibonacci sequence — 1, 2, 3, 5, 8 — because they don’t go up evenly. This helps teams focus on relative size. For example:</li>
+                    <ul>
+                      <li>A 1-point task is super small and straightforward.</li>
+                      <li>A 3-point task takes more effort — maybe it’s a bit complex or has some unknowns.</li>
+                      <li>An 8-point task is large and will take significant effort — it might have technical risks or require more coordination.</li>
+                    </ul>
+                  <li>Why not just use 4, 6, or 7? Because choosing between closely ranked numbers like 5 and 6 isn't helpful. Using a spaced-out scale forces you to make clearer decisions.</li>
+                  <li>Story points help your team compare tasks to each other instead of guessing hours. Over time, you'll get better at knowing how many points your team can finish in a sprint — which makes planning much easier.</li>
+                </ul>
+              </li>
+            </ol>
+
+            <img src="img/estimate/Sprint Planning Capacity Sheet.png" alt="Sprint Planning Capacity Sheet" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
 
             <h2 id="summary">Final Notes</h2>
             <p>The Capacity Planning Sheet doesn’t just help you plan—it helps you communicate. It becomes a source of truth during reviews, and a planning tool for founders who want to stay focused on outcomes, not the chaos of task-level execution.</p>
