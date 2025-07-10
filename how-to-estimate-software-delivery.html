@@ -47,11 +47,11 @@
     </div>
   </header>
     <div class="pilot-buttons">
-    <a href="#why-estimation" class="btn-pilot">Why Estimate</a>
-    <a href="#hours-vs-points" class="btn-pilot">Hours vs Story Points</a>
-    <a href="#when-how" class="btn-pilot">When & How</a>
-    <a href="#capacity" class="btn-pilot">Capacity Planning</a>
-    <a href="#summary" class="btn-pilot">Wrap-Up</a>
+    <a href="#estimation-formula" class="btn-pilot">The Estimation Formula</a>
+    <a href="#what-building" class="btn-pilot">Clarify What You’re Building</a>
+    <a href="#capacity" class="btn-pilot">Estimate Your Team’s Capacity</a>
+    <a href="#sprint-planning" class="btn-pilot">Run a Sprint Planning Meeting</a>
+    <a href="#velocity" class="btn-pilot">Estimate Your Team's Velocity</a>
     </div>
 
 
@@ -86,10 +86,12 @@
             <h2 id="estimation-formula">The Estimation Formula</h2>
             <p>At its core, estimating software delivery comes down to this:</p>
             <p><center><strong>Tasks to complete</strong> + <strong>Team’s available time</strong> = <strong>Your estimate</strong></center></p>
-            <p>Obvious, I know, but actually to do this, we'll break it into two parts:</p>
+            <p>Obvious, I know, but to actually do this, we'll break it into 4 parts:</p>
             <ol>
               <li>Know what needs to get done (your <strong>roadmap</strong>)</li>
               <li>Know what your team can actually do in a sprint (their <strong>capacity</strong>)</li>
+              <li>Assign work and get estimates (your <strong>sprint planning</strong>)</li>
+              <li>Estimate for the future (their <strong>velocity</strong>)</li>
             </ol>
 
             <h2 id="what-building">Step 1: Clarify What You’re Building</h2>
@@ -102,7 +104,7 @@
                 <li>Task table with embedded fields</li>
                 <li>Priority tagging and owner fields</li>
               </ul></ul>
-            <h3>🔎 Schedule and Facilitate a Product Planning Meeting (meeting 1/2)</h3>
+            <h3>📅 Schedule and Facilitate a Product Increment (PI) Planning Meeting (meeting 1/2)</h3>
               <p>Invite your:</p>
               <ul><ul>
                 <li>Tech lead</li>
@@ -113,15 +115,19 @@
               <p>Duration: 2 hours (It shouldn't take more than 2 hours. When you start, it'll take the full 2 but once you get used to it, it'll only take 1 to 1.5 hours)</p>
               <p>Use this agenda</p>
               <pre><code>
+                Product Implement Planning
+                Duration: 2 hours
+                Attendees: Product Owner, Tech Lead, Stakeholders
                 Agenda:
                 - What’s the core version of our product we want to ship?
                 - What tasks or features must be included?
                 - Are there any dependencies or blockers?
                 - What’s the rough target date for launch?
+                - Any risks to delivery? (such as tech debt, large holiday coming up, lots of team members out on PTO, etc.)
               </code></pre>
             
-            <p>Someone should take notes and write the agreed-upon features as tasks into your task manager. If you know your task manager well, then you can </p>
-            <blockquote><span><strong>✨ Tip: Keep it lean. Don’t add everything you want; just what you need to ship.</strong></span></blockquote>
+            <p>Someone should take notes and write the agreed-upon features as tasks into your task manager. If you know your task manager well, then you can take notes, update the task manager, and run the meeting.</p>
+            <blockquote><span><strong>✨ Tip: Keep it lean. Don’t add everything you want; just what you need to ship for this particular feature release.</strong></span></blockquote>
 
 
             <h2 id="capacity">Step 2: Estimate Your Team’s Capacity</h2>
@@ -149,9 +155,9 @@
 
             <h3>2. 🌴 Team PTO</h3>
             <img src="img/estimate/Team PTO.png" alt="Team PTO Section" style="width:50%; margin: 20px auto; display: block; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-            <p>List each team member and how many full days they are taking off during the sprint. This directly impacts their availability and is factored into the next section. I usually just write the dates out like if Team Member 1 is Tonny and he has 1/15/25, 1/17/25, 1/21/25 off. I list those dates down here.</p>
+            <p>List each team member and how many full days they are taking off during the sprint. This directly impacts their availability and is factored into the next section. I usually just write the dates out like if Team Member 1 is Tony and he has 1/15/25, 1/17/25, 1/21/25 off. I list those dates down here.</p>
 
-            <h3>3. Team Capacity Configuration</h3>
+            <h3>3. 📝 Team Capacity Configuration</h3>
             <img src="img/estimate/Team Capacity Configuration.png" alt="Team Capacity Configuration Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
             <p><strong>First:</strong> Change all the place holder team members with your own team and the group them by department (if you so choose - e.g. frontend, backend, QA, etc.)</p>
             <p><strong>Second:</strong> Input the "Number of PTO days in Sprint" row for each team member. To collect the info, either message the team before you hold the sprint planning meeting with your team or collect it during the planning meeting. I would recommend doing it before so you do not waste time during planning.</p>
@@ -201,12 +207,31 @@
             </ul>
             <p>No stakeholders needed.</p>
             <p><strong>The goal: </strong>Assign tasks to team members and estimate how long each one will take.</p>
+            <p>Use this agenda:</p>
+            <pre><code>
+            Sprint Planning
+            Duration: 1–2 hours
+            Attendees: Tech Team, Tech Lead, Product Owner
+            Agenda:
+            1. Review the sprint goal
+            2. Go over high-priority tasks from the roadmap
+            3. For each task:
+              - Assign it to a team member
+              - Estimate the effort (hours or story points)
+            4. Check capacity and utilization for each person
+            5. Adjust if anyone is overbooked or underbooked
+            6. Confirm everyone understands what they’re committing to
+            7. End with Q&A or clarification
+            </code></pre>
+
+            <p>Learn the steps from <a href="#capacity-image">this image (below)</a> beforehand and during the meeting, guide your team through the steps.</p>
+            <img id="capacity-image" src="img/estimate/Sprint Planning Capacity Sheet.png" alt="Sprint Planning Capacity Sheet" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
             <p><strong>Step 1:</strong> Double check the sprint congiguration section fields with the team. Often times people forget there is a company holiday so the third field is wrong. Just doulbe check for simple mistakes like that.</p>
             <p><strong>Step 2:</strong> Double check with the team if there are any PTO days they have. Sometimes even if you message the team beforehand, a new PTO day comes up that has to be updated so check this with the team as well.</p>
-            <p><strong>Step 3:</strong> Enter the number of days of PTO each team member has. For isntance, from our previous example if Tonny has 1/15/25, 1/17/25, 1/21/25 off, I would write down "3" in cell B14. I would do this with all the team members and will out that row.</p>
-            <p><strong>Step 4:</strong> Now we estimate. You would got through each ticket and first, assign it to a team member, then ask how long it'll take. "Length" is determined by one of two ways.</p>
+            <p><strong>Step 3:</strong> Enter the number of PTO days each team member has. For isntance, from our previous example if Tony has 1/15/25, 1/17/25, 1/21/25 off, I would write down "3" in cell B14. I would do this with all the team members and fill out that row.</p>
+            <p><strong>Step 4:</strong> Now we estimate! You would got through each ticket and first, assign it to a team member, then ask how long it'll take. "Length" is determined by one of two ways.</p>
             <ol>
-              <li><u>Story points:</u> Choose 1, 2, 3, 5, or 8 with 1 being the least effort and 8 being the most effort. Used to measure effort and not time. You assign a number that reflects how complex, risky, or big the task feels compared to others.
+              <li><u>Story points (recommended for advanced teams):</u> Choose 1, 2, 3, 5, or 8 with 1 being the least effort and 8 being the most effort. This is used to measure effort and not time. You choose a number that shows how complex, risky, or big the task feels compared to others.
                 <ul>
                   <li>The numbers usually come from the Fibonacci sequence — 1, 2, 3, 5, 8 — because they don’t go up evenly. This helps teams focus on relative size. For example:</li>
                     <ul>
@@ -218,19 +243,87 @@
                   <li>Story points help your team compare tasks to each other instead of guessing hours. Over time, you'll get better at knowing how many points your team can finish in a sprint — which makes planning much easier.</li>
                 </ul>
               </li>
+              <li><u>Hours (recommended for junior teams - training wheels):</u> Hours are straightforward. If you choose this, you just ask how long they think the task will take.
+                <ul>
+                  <li>We use hours for junior teams is because they most likely do not know exactly how long a task will take.
+                    <li>It is MUCH easier for them to get a sense of clarity during a team reflection, like sprint retrospective, on how off their estimate was.</li>
+                    <li>Once they’re consistent, then you can introduce story points.</li>
+                  </li>
+                </ul>
+              </li>
             </ol>
+            <p>Whichever estimation unit you decide to use,</p>
+            <ol>
+              <li>go through each task you already loaded onto the sheet</li>
+              <li>ask the team who is most likely the best person to handle the task</li>
+              <li>then ask the chosen team member how many hours or story points the task should be</li>
+            </ol>
+            <p><strong>Step 5:</strong> Once all the tasks are listed, assigned, and estimated, go through the sprint allocation section and check the row "Sprint Utilization" row. Make sure your team is at least at 90% or above. Talk with your team and see if everyone agrees with the plan.</p>
+            
+            <blockquote><span><strong>✨ Tip: Try not to overfill a sprint. Leave a little wiggle room for unexpected tasks.</strong></span></blockquote>
+            <p></p>
+            <p>Sprint Planning is now done!</p>
 
-            <img src="img/estimate/Sprint Planning Capacity Sheet.png" alt="Sprint Planning Capacity Sheet" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
-
-            <h2 id="summary">Final Notes</h2>
-            <p>The Capacity Planning Sheet doesn’t just help you plan—it helps you communicate. It becomes a source of truth during reviews, and a planning tool for founders who want to stay focused on outcomes, not the chaos of task-level execution.</p>
-            <p>Download the sheet, customize it for your team, and use it as part of every sprint cycle. It will transform how you approach delivery, team health, and business timelines.</p>
+            <h2 id="velocity">Step 4 (Final Step!): Estimate Your Team's Velocity</h2>
+            <p>Once you've completed <strong>at least 2 sprints,</strong> you can calculate each team member's <strong>velocity:</strong></p>
+            <center><strong>Velocity = average hours (or points) completed per sprint</strong></center>
+            <strong>Example:</strong>
+            <p>Dev Tony: Sprint 1 he completed 30 hours and in Sprint 2, he completed 34 hours. His <strong>Velocity = (30+34)/2 = 32</strong></p>
+            <p>You can use this number to forecast how long bigger features or milestones will take. In your product planning meeting, if a task is determined to be 64 hours and you know Tony works on tasks like this so he is most likely to take it. You can estimate about how long the new feature will take by using Tony's velocity. Let's just say it is 32, that’s 2 sprints (32 + 32 = 64) the feature will be done by.</p>
+            <p>In a seperate sheet, write down every team member and their velocity. Use can use the Velocity Tracker to do this. On there, keep a running log of how much work each team member finishes each sprint. Start filling it out after Sprint 1 is done — just ask your team how many hours or story points they actually completed, and write that number under their name. Do the same thing after Sprint 2. You won’t get a velocity estimate until both Sprint 1 and 2 are complete, since the tracker needs at least two sprints to calculate an average. Once that happens, the sheet will start showing each person’s average velocity — and it’ll use that number to estimate how much work they can handle in future sprints. As you keep filling it in, earlier rows stay as real data and future rows show projections to help with planning.</p>
+            <p>This formula and sheet also works for story points!</p>
+            <p><strong>Note:</strong> This has mock data so the rest of the rows after Sprint 7 are more or less the same. When you populate it with your data, it will not be the same since this is a document you will be updating after every sprint.</p>
+            <img src="img/estimate/Velocity Tracking.png" alt="Velocity Section" style="width:100%; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+            <p>Here is the velocity tracking document. Just like everything here, it is yours to keep for free. Use it religiously and I promise you will have a more accurate tool for estimating and planning.</p>
             <div class="pilot-cta-buttons" style="text-align: center; margin-top: 30px; margin-bottom: 60px;">
-                <a href="downloads/Team Capacity Sheet Template.xlsx" class="btn-get-started" download>
-                    Download the Capacity Planning Sheet
+                <a href="downloads/Velocity Tracking Template.xlsx" class="btn-get-started" download>
+                    Download the Velocity Tracking Sheet
                 </a>
             </div>
 
+            <h2 id="summary">🔁 Recap: How to Estimate Software Delivery at a Startup</h2>
+            <p>Estimation doesn’t have to be complicated. Here’s the high-level playbook:</p>
+
+            <ol>
+              <li>
+                <strong>📌 Know what you’re building</strong><br>
+                Use a roadmap everyone can see (on Notion, Trello, ClickUp, or etc.). Run a product planning meeting with your tech lead, product owner, and stakeholders to figure out what should be in the next version.<br>
+                → Add those tasks to your task manager.
+              </li>
+              <br>
+              <li>
+                <strong>🧮 Calculate your team’s capacity</strong><br>
+                Use the Capacity Planning Sheet to figure out how many hours (or story points) your team can realistically work in the upcoming sprint.<br>
+                → Make sure holidays, PTO, and meeting times are factored in.
+              </li>
+              <br>
+              <li>
+                <strong>📅 Run a Sprint Planning Meeting</strong><br>
+                In this meeting, assign each task to someone and ask how long it’ll take. You can use:
+                <ul>
+                  <li><strong>Story points</strong> if your team is experienced</li>
+                  <li><strong>Hours</strong> if your team is still new</li>
+                </ul>
+                → Check the utilization section and make sure no one is overloaded or sitting idle.
+              </li>
+              <br>
+              <li>
+                <strong>🚀 Track your team’s velocity</strong><br>
+                After 2+ sprints, calculate each person’s average output.<br>
+                → This helps you forecast how long big features will take in the future.
+              </li>
+            </ol>
+
+            <br>
+
+            <p><strong>📂 Resources to make this easier:</strong></p>
+            <ul>
+              <li>✅ Task Manager of your choice (Notion, Jira, Trello...)</li>
+              <li>✅ <a href="#capacity">Capacity Planning Sheet</a></li>
+              <li>✅ <a href="#velocity">Velocity Tracker</a></li></li>
+            </ul>
+
+            <blockquote><span><strong>✨ And we're done! You’ve now got the full toolkit to run planning like a pro. Now it’s just about using it every sprint and adjusting along the way. It will get easier the more times you do it. The key is being prepared (that is why we gave all these tools to use).</strong></span></blockquote>
 
         </div>
     </section>
